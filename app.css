@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid hsl(172, 67%, 45%) !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Space Mono";
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 2.5rem;
+}
+
+.calculator {
+  background-color: white;
+  width: 100%;
+  max-width: 25rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+#bill,
+#numPeople {
+  display: block;
+  border: 2px solid transparent;
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: hsl(183, 100%, 15%);
+}
+
+label[for="bill"],
+label[for="numPeople"],
+.tipOptionsLabel {
+  color: hsl(186, 14%, 43%);
+  display: block;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.billInput,
+.numPeopleInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.errorMsg {
+  position: absolute;
+  color: rgb(254, 106, 106);
+  font-size: 0.8rem;
+  right: 0;
+  top: -2.5rem;
+  display: none;
+}
+
+.tipOptions .errorMsg {
+  top: -3rem;
+}
+
+.displayError + .errorMsg {
+  display: inline-block;
+}
+
+.displayError {
+  border: 2px solid rgb(254, 106, 106) !important;
+}
+
+.dollarImg,
+.personImg {
+  position: absolute;
+  left: 1rem;
+}
+
+.tipOptions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0rem;
+  position: relative;
+}
+
+.tipOption,
+#customTip {
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: hsl(189, 41%, 97%);
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  padding: 0.25rem 1rem;
+  max-width: 8.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.tipOption:hover,
+.resetBtn:hover,
+#customTip {
+  cursor: pointer;
+}
+
+.resetBtn:hover {
+  background-color: rgba(159,232,223,255);
+}
+
+.left {
+  margin-right: auto;
+}
+
+#customTip {
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  padding-right: 0.5rem;
+}
+
+#bill::placeholder,
+#numPeople::placeholder,
+#customTip::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.results {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  padding: 1rem;
+  color: hsl(189, 41%, 97%);
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tipRes,
+.totalRes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.checkedTip {
+  background-color: rgba(38, 192, 171, 0.5);
+  color: hsl(183, 100%, 15%);
+}
+
+.tipResHeading,
+.totalResHeading {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.tipResSubHeading,
+.totalResSubHeading {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.7rem;
+  margin-top: 0;
+}
+
+.tipResAmount,
+.totalResAmount {
+  color: hsl(172, 67%, 45%);
+  font-size: 1.5rem;
+}
+
+.resetBtn {
+  width: 90%;
+  height: 3rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  border: 1px solid hsl(172, 67%, 45%);
+  background-color: hsl(172, 67%, 45%);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(183, 100%, 15%);
+}
+
+@media (min-width: 55rem) {
+  .calculator {
+    display: flex;
+    max-width: 55rem;
+    padding: 3rem;
+    height: 34rem;
+  }
+
+  .results {
+    flex: 1;
+    margin-left: 1.5rem;
+    margin-top: 0;
+  }
+
+  .inputs {
+    flex: 1;
+    margin-right: 1.5rem;
+  }
+
+  .tipResHeading,
+  .totalResHeading {
+    font-size: 1.2rem;
+  }
+  .tipResSubHeading,
+  .totalResSubHeading {
+    font-size: 1rem;
+  }
+
+  label,
+  .tipOptionsLabel {
+    font-size: 1.2rem;
+  }
+
+  .tipResAmount,
+  .totalResAmount {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .tipRes,
+  .totalRes { 
+    margin-bottom: 2rem;
+  }
+
+  .resetBtn {
+    margin-top: auto;
+  }
+
+  label[for=bill]{
+    margin-top: 0.5rem;
+  }
+}

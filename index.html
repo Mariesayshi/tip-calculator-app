@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./app.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+
+  <body>
+    <div class="logo">
+      <img src="./images/logo.svg" />
+    </div>
+    <section class="calculator">
+      <div class="inputs">
+        <label for="bill">Bill</label>
+        <div class="billInput">
+          <input id="bill" placeholder="0" type="number" />
+          <p class="errorMsg">Can't be zero</p>
+          <img class="dollarImg" src="./images/icon-dollar.svg" />
+        </div>
+
+        <p class="tipOptionsLabel">Select Tip %</p>
+        <div class="tipOptions">
+
+          <button class="tipOption left">5%</button>
+          <button class="tipOption">10%</button>
+          <button class="tipOption left">15%</button>
+          <button class="tipOption">25%</button>
+          <button class="tipOption left">50%</button>
+          <input class="tipOption" id="customTip" placeholder="Custom" type="number" />
+          <p class="errorMsg">Can't be zero</p>
+
+        </div>
+        <label for="numPeople">Number of People</label>
+
+        <div class="numPeopleInput">
+          <input placeholder="0" id="numPeople" type="number" />
+          <p class="errorMsg">Can't be zero</p>
+          <img class="personImg" src="./images/icon-person.svg" />
+
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="tipRes">
+          <div class="tipResHeadings">
+            <p class="tipResHeading">Tip Amount</p>
+            <p class="tipResSubHeading">/ person</p>
+          </div>
+          <p class="tipResAmount">$0.00</p>
+        </div>
+        <div class="totalRes">
+          <div class="totalResHeadings">
+            <p class="totalResHeading">Total</p>
+            <p class="totalResSubHeading">/ person</p>
+          </div>
+          <p class="totalResAmount">$0.00</p>
+        </div>
+        <button class="resetBtn">Reset</button>
+      </div>
+    </section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
